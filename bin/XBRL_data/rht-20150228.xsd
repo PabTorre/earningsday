@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!-- RR Donnelley Xcelerate Taxonomy Schema, based on XBRL 2.1  http://www.rrdonnelley.com/ -->
+<!-- Version: 6.22.4 -->
+<!-- Round: 6 -->
+<!-- Creation date: 2015-04-27T23:08:20Z -->
+<!-- Copyright (c) 2005-2013 R.R. Donnelley &amp; Sons Company All Rights Reserved. -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+  xmlns:xbrli="http://www.xbrl.org/2003/instance"
+  xmlns:link="http://www.xbrl.org/2003/linkbase"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:us-gaap="http://fasb.org/us-gaap/2014-01-31"
+  xmlns:us-types="http://fasb.org/us-types/2014-01-31"
+  xmlns:rht="http://www.redhat.com/20150228"
+  xmlns:nonnum="http://www.xbrl.org/dtr/type/non-numeric"
+  xmlns:num="http://www.xbrl.org/dtr/type/numeric"
+  xmlns:xbrldt="http://xbrl.org/2005/xbrldt"
+  xmlns:country="http://xbrl.sec.gov/country/2013-01-31"
+  xmlns:currency="http://xbrl.sec.gov/currency/2014-01-31"
+  xmlns:dei="http://xbrl.sec.gov/dei/2014-01-31"
+  xmlns:exch="http://xbrl.sec.gov/exch/2014-01-31"
+  xmlns:invest="http://xbrl.sec.gov/invest/2013-01-31"
+  xmlns:naics="http://xbrl.sec.gov/naics/2011-01-31"
+  xmlns:sic="http://xbrl.sec.gov/sic/2011-01-31"
+  xmlns:stpr="http://xbrl.sec.gov/stpr/2011-01-31"
+  targetNamespace="http://www.redhat.com/20150228"
+  elementFormDefault="qualified" attributeFormDefault="unqualified">
+  <annotation>
+    <appinfo>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DocumentandEntityInformation" id="DocumentandEntityInformation">
+        <link:definition>1001 - Document - Document and Entity Information</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/StatementOfFinancialPositionClassified" id="Role_StatementOfFinancialPositionClassified">
+        <link:definition>1003 - Statement - Consolidated Balance Sheets</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/StatementOfFinancialPositionClassifiedParenthetical" id="Role_StatementOfFinancialPositionClassifiedParen">
+        <link:definition>1004 - Statement - Consolidated Balance Sheets (Parenthetical)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/StatementOfIncome" id="Role_StatementOfIncome">
+        <link:definition>1005 - Statement - Consolidated Statements of Operations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/StatementOfOtherComprehensiveIncome" id="Role_StatementOfOtherComprehensiveIncome">
+        <link:definition>1006 - Statement - Consolidated Statements of Comprehensive Income</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/StatementOfShareholdersEquityAndOtherComprehensiveIncome" id="Role_ci-StatementOfShareholdersEquityAndOtherComprehensiveIncome">
+        <link:definition>1007 - Statement - Consolidated Statements of Stockholders' Equity</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/StatementOfCashFlowsIndirect" id="Role_StatementOfCashFlowsIndirect">
+        <link:definition>1008 - Statement - Consolidated Statements of Cash Flows</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsNatureOfOperations" id="Role_NotesToFinancialStatementsNatureOfOperations">
+        <link:definition>1009 - Disclosure - Company</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsSignificantAccountingPoliciesTextBlock" id="Role_NotesToFinancialStatementsSignificantAccountingPoliciesTextBlock">
+        <link:definition>1010 - Disclosure - Summary of Significant Accounting Policies</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsBusinessCombinationDisclosureTextBlock" id="Role_NotesToFinancialStatementsBusinessCombinationDisclosureTextBlock">
+        <link:definition>1011 - Disclosure - Business Combinations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsLoansNotesTradeAndOtherReceivablesDisclosureTextBlock" id="Role_NotesToFinancialStatementsLoansNotesTradeAndOtherReceivablesDisclosureTextBlock">
+        <link:definition>1012 - Disclosure - Accounts Receivable</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsPropertyPlantAndEquipmentDisclosureTextBlock" id="Role_NotesToFinancialStatementsPropertyPlantAndEquipmentDisclosureTextBlock">
+        <link:definition>1013 - Disclosure - Property and Equipment</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsIntangibleAssetsDisclosureTextBlock" id="Role_NotesToFinancialStatementsIntangibleAssetsDisclosureTextBlock">
+        <link:definition>1014 - Disclosure - Identifiable Intangible Assets</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsOtherAssetsDisclosureTextBlock" id="Role_NotesToFinancialStatementsOtherAssetsDisclosureTextBlock">
+        <link:definition>1015 - Disclosure - Other Assets, Net</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsPrepaidExpenseTextBlock" id="Role_NotesToFinancialStatementsPrepaidExpenseTextBlock">
+        <link:definition>1016 - Disclosure - Prepaid Expenses</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsAccountsPayableAndAccruedLiabilitiesDisclosureTextBlock" id="Role_NotesToFinancialStatementsAccountsPayableAndAccruedLiabilitiesDisclosureTextBlock">
+        <link:definition>1017 - Disclosure - Accounts Payable and Accrued Expenses</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsDerivativeInstrumentsAndHedgingActivitiesDisclosureTextBlock" id="Role_NotesToFinancialStatementsDerivativeInstrumentsAndHedgingActivitiesDisclosureTextBlock">
+        <link:definition>1018 - Disclosure - Derivative Instruments</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsIncomeTaxDisclosureTextBlock" id="Role_NotesToFinancialStatementsIncomeTaxDisclosureTextBlock">
+        <link:definition>1019 - Disclosure - Income Taxes</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsStockholdersEquityNoteDisclosureTextBlock" id="Role_NotesToFinancialStatementsStockholdersEquityNoteDisclosureTextBlock">
+        <link:definition>1020 - Disclosure - Common and Preferred Stock</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsDisclosureOfCompensationRelatedCostsShareBasedPaymentsTextBlock" id="Role_NotesToFinancialStatementsDisclosureOfCompensationRelatedCostsShareBasedPaymentsTextBlock">
+        <link:definition>1021 - Disclosure - Share-based Awards</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsCommitmentsAndContingenciesDisclosureTextBlock" id="Role_NotesToFinancialStatementsCommitmentsAndContingenciesDisclosureTextBlock">
+        <link:definition>1022 - Disclosure - Commitments and Contingencies</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsLegalMattersAndContingenciesTextBlock" id="Role_NotesToFinancialStatementsLegalMattersAndContingenciesTextBlock">
+        <link:definition>1023 - Disclosure - Legal Proceedings</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsPensionAndOtherPostretirementBenefitsDisclosureTextBlock" id="Role_NotesToFinancialStatementsPensionAndOtherPostretirementBenefitsDisclosureTextBlock">
+        <link:definition>1024 - Disclosure - Employee Benefit Plans</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsTreasuryStockTextBlock" id="Role_NotesToFinancialStatementsTreasuryStockTextBlock">
+        <link:definition>1025 - Disclosure - Share Repurchase Programs</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsFairValueDisclosuresTextBlock" id="Role_NotesToFinancialStatementsFairValueDisclosuresTextBlock">
+        <link:definition>1026 - Disclosure - Assets and Liabilities Measured at Fair Value on a Recurring Basis</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsEarningsPerShareTextBlock" id="Role_NotesToFinancialStatementsEarningsPerShareTextBlock">
+        <link:definition>1027 - Disclosure - Earnings Per Share</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsSegmentReportingDisclosureTextBlock" id="Role_NotesToFinancialStatementsSegmentReportingDisclosureTextBlock">
+        <link:definition>1028 - Disclosure - Segment Reporting</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsOtherLiabilitiesDisclosureTextBlock" id="Role_NotesToFinancialStatementsOtherLiabilitiesDisclosureTextBlock">
+        <link:definition>1029 - Disclosure - Other Long-Term Obligations</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsDebtDisclosureTextBlock" id="Role_NotesToFinancialStatementsDebtDisclosureTextBlock">
+        <link:definition>1030 - Disclosure - Convertible Notes</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsComprehensiveIncomeNoteTextBlock" id="Role_NotesToFinancialStatementsComprehensiveIncomeNoteTextBlock">
+        <link:definition>1031 - Disclosure - Accumulated Other Comprehensive Loss</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsQuarterlyFinancialInformationTextBlock" id="Role_NotesToFinancialStatementsQuarterlyFinancialInformationTextBlock">
+        <link:definition>1032 - Disclosure - Unaudited Quarterly Results</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsSubsequentEventsTextBlock" id="Role_NotesToFinancialStatementsSubsequentEventsTextBlock">
+        <link:definition>1033 - Disclosure - Subsequent Events</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsSignificantAccountingPoliciesTextBlockPolicies" id="Role_NotesToFinancialStatementsSignificantAccountingPoliciesTextBlockPolicies">
+        <link:definition>1034 - Disclosure - Summary of Significant Accounting Policies (Policies)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsBusinessCombinationDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsBusinessCombinationDisclosureTextBlockTables">
+        <link:definition>1035 - Disclosure - Business Combinations (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsLoansNotesTradeAndOtherReceivablesDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsLoansNotesTradeAndOtherReceivablesDisclosureTextBlockTables">
+        <link:definition>1036 - Disclosure - Accounts Receivable (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsPropertyPlantAndEquipmentDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsPropertyPlantAndEquipmentDisclosureTextBlockTables">
+        <link:definition>1037 - Disclosure - Property and Equipment (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsIntangibleAssetsDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsIntangibleAssetsDisclosureTextBlockTables">
+        <link:definition>1038 - Disclosure - Identifiable Intangible Assets (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsOtherAssetsDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsOtherAssetsDisclosureTextBlockTables">
+        <link:definition>1039 - Disclosure - Other Assets, Net (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsPrepaidExpenseTextBlockTables" id="Role_NotesToFinancialStatementsPrepaidExpenseTextBlockTables">
+        <link:definition>1040 - Disclosure - Prepaid Expenses (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsAccountsPayableAndAccruedLiabilitiesDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsAccountsPayableAndAccruedLiabilitiesDisclosureTextBlockTables">
+        <link:definition>1041 - Disclosure - Accounts Payable and Accrued Expenses (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsDerivativeInstrumentsAndHedgingActivitiesDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsDerivativeInstrumentsAndHedgingActivitiesDisclosureTextBlockTables">
+        <link:definition>1042 - Disclosure - Derivative Instruments (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsIncomeTaxDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsIncomeTaxDisclosureTextBlockTables">
+        <link:definition>1043 - Disclosure - Income Taxes (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsDisclosureOfCompensationRelatedCostsShareBasedPaymentsTextBlockTables" id="Role_NotesToFinancialStatementsDisclosureOfCompensationRelatedCostsShareBasedPaymentsTextBlockTables">
+        <link:definition>1044 - Disclosure - Share-based Awards (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsCommitmentsAndContingenciesDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsCommitmentsAndContingenciesDisclosureTextBlockTables">
+        <link:definition>1045 - Disclosure - Commitments and Contingencies (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsPensionAndOtherPostretirementBenefitsDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsPensionAndOtherPostretirementBenefitsDisclosureTextBlockTables">
+        <link:definition>1046 - Disclosure - Employee Benefit Plans (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsFairValueDisclosuresTextBlockTables" id="Role_NotesToFinancialStatementsFairValueDisclosuresTextBlockTables">
+        <link:definition>1047 - Disclosure - Assets and Liabilities Measured at Fair Value on a Recurring Basis (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsEarningsPerShareTextBlockTables" id="Role_NotesToFinancialStatementsEarningsPerShareTextBlockTables">
+        <link:definition>1048 - Disclosure - Earnings Per Share (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsSegmentReportingDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsSegmentReportingDisclosureTextBlockTables">
+        <link:definition>1049 - Disclosure - Segment Reporting (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsOtherLiabilitiesDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsOtherLiabilitiesDisclosureTextBlockTables">
+        <link:definition>1050 - Disclosure - Other Long-Term Obligations (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsDebtDisclosureTextBlockTables" id="Role_NotesToFinancialStatementsDebtDisclosureTextBlockTables">
+        <link:definition>1051 - Disclosure - Convertible Notes (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsComprehensiveIncomeNoteTextBlockTables" id="Role_NotesToFinancialStatementsComprehensiveIncomeNoteTextBlockTables">
+        <link:definition>1052 - Disclosure - Accumulated Other Comprehensive Loss (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/NotesToFinancialStatementsQuarterlyFinancialInformationTextBlockTables" id="Role_NotesToFinancialStatementsQuarterlyFinancialInformationTextBlockTables">
+        <link:definition>1053 - Disclosure - Unaudited Quarterly Results (Tables)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfSignificantAccountingPoliciesAdditionalInformation" id="DisclosureSummaryOfSignificantAccountingPoliciesAdditionalInformation">
+        <link:definition>1054 - Disclosure - Summary Of Significant Accounting Policies - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureBusinessCombinationsAdditionalInformation" id="DisclosureBusinessCombinationsAdditionalInformation">
+        <link:definition>1055 - Disclosure - Business Combinations - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfConsiderationTransferredInConnectionWithAcquisition" id="DisclosureSummaryOfConsiderationTransferredInConnectionWithAcquisition">
+        <link:definition>1056 - Disclosure - Summary of Consideration Transferred in Connection With Acquisition (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfConsiderationTransferredInConnectionWithAcquisitionParenthetical" id="DisclosureSummaryOfConsiderationTransferredInConnectionWithAcquisitionParenthetical">
+        <link:definition>1057 - Disclosure - Summary of Consideration Transferred in Connection With Acquisition (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureTangibleAndIdentifiableIntangibleAssetsAcquiredAndLiabilitiesAssumed" id="DisclosureTangibleAndIdentifiableIntangibleAssetsAcquiredAndLiabilitiesAssumed">
+        <link:definition>1058 - Disclosure - Tangible and Identifiable Intangible Assets Acquired and Liabilities Assumed (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfAllocationOfConsiderationTransferredToIdentifiableIntangibleAssets" id="DisclosureSummaryOfAllocationOfConsiderationTransferredToIdentifiableIntangibleAssets">
+        <link:definition>1059 - Disclosure - Summary of Allocation of Consideration Transferred to Identifiable Intangible Assets (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosurePostAcquisitionFinancialInformation" id="DisclosurePostAcquisitionFinancialInformation">
+        <link:definition>1060 - Disclosure - Post Acquisition Financial Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureProFormaConsolidatedFinancialInformation" id="DisclosureProFormaConsolidatedFinancialInformation">
+        <link:definition>1061 - Disclosure - Pro Forma Consolidated Financial Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfChangesInGoodwill" id="DisclosureSummaryOfChangesInGoodwill">
+        <link:definition>1062 - Disclosure - Summary of Changes in Goodwill (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureActivitiesInAllowanceForDoubtfulAccounts" id="DisclosureActivitiesInAllowanceForDoubtfulAccounts">
+        <link:definition>1063 - Disclosure - Activities In Allowance For Doubtful Accounts (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureAccountReceivablesAdditionalInformation" id="DisclosureAccountReceivablesAdditionalInformation">
+        <link:definition>1064 - Disclosure - Account Receivables - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfPropertyAndEquipmentAtCost" id="DisclosureScheduleOfPropertyAndEquipmentAtCost">
+        <link:definition>1065 - Disclosure - Schedule Of Property And Equipment At Cost (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosurePropertyAndEquipmentAdditionalInformation" id="DisclosurePropertyAndEquipmentAdditionalInformation">
+        <link:definition>1066 - Disclosure - Property And Equipment - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureDepreciationExpenseRecognizedInConsolidatedFinancialStatements" id="DisclosureDepreciationExpenseRecognizedInConsolidatedFinancialStatements">
+        <link:definition>1067 - Disclosure - Depreciation Expense Recognized in Consolidated Financial Statements (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureIdentifiableIntangibleAssetsAdditionalInformation" id="DisclosureIdentifiableIntangibleAssetsAdditionalInformation">
+        <link:definition>1068 - Disclosure - Identifiable Intangible Assets - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfIdentifiableIntangibleAssets" id="DisclosureSummaryOfIdentifiableIntangibleAssets">
+        <link:definition>1069 - Disclosure - Summary of Identifiable Intangible Assets (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfAmortizationExpenseAssociatedWithIdentifiableIntangibleAssets" id="DisclosureScheduleOfAmortizationExpenseAssociatedWithIdentifiableIntangibleAssets">
+        <link:definition>1070 - Disclosure - Schedule of Amortization Expense Associated with Identifiable Intangible Assets (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfAmortizationExpense" id="DisclosureScheduleOfAmortizationExpense">
+        <link:definition>1071 - Disclosure - Schedule of Amortization Expense (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureComponentsOfOtherAssetsNet" id="DisclosureComponentsOfOtherAssetsNet">
+        <link:definition>1072 - Disclosure - Components of Other Assets ,Net (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureOtherAssetsNetAdditionalInformation" id="DisclosureOtherAssetsNetAdditionalInformation">
+        <link:definition>1073 - Disclosure - Other Assets, Net - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfPrepaidExpenseIncludingSalesCommission" id="DisclosureScheduleOfPrepaidExpenseIncludingSalesCommission">
+        <link:definition>1074 - Disclosure - Schedule of Prepaid Expense, Including Sales Commission (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfAccountsPayableAndAccruedExpenses" id="DisclosureSummaryOfAccountsPayableAndAccruedExpenses">
+        <link:definition>1075 - Disclosure - Summary of Accounts Payable and Accrued Expenses (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfEffectsOfDerivativeInstruments" id="DisclosureSummaryOfEffectsOfDerivativeInstruments">
+        <link:definition>1076 - Disclosure - Summary of Effects of Derivative Instruments (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfUSAndForeignComponentsOfIncomeBeforeProvisionForIncomeTaxes" id="DisclosureScheduleOfUSAndForeignComponentsOfIncomeBeforeProvisionForIncomeTaxes">
+        <link:definition>1077 - Disclosure - Schedule of U.S and Foreign Components of Income Before Provision for Income Taxes (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfComponentsOfProvisionForIncomeTaxes" id="DisclosureScheduleOfComponentsOfProvisionForIncomeTaxes">
+        <link:definition>1078 - Disclosure - Schedule of Components of Provision for Income Taxes (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfDeferredTaxAssetsAndLiabilities" id="DisclosureScheduleOfDeferredTaxAssetsAndLiabilities">
+        <link:definition>1079 - Disclosure - Schedule of Deferred Tax Assets and Liabilities (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureGrossAndNetDeferredTaxAssetAndLiabilityPositions" id="DisclosureGrossAndNetDeferredTaxAssetAndLiabilityPositions">
+        <link:definition>1080 - Disclosure - Gross and Net Deferred Tax Asset and Liability Positions (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureIncomeTaxesAdditionalInformation" id="DisclosureIncomeTaxesAdditionalInformation">
+        <link:definition>1081 - Disclosure - Income Taxes - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureReconciliationOfStatutoryFederalIncomeTaxRatesToProvisionForIncomeTaxes" id="DisclosureReconciliationOfStatutoryFederalIncomeTaxRatesToProvisionForIncomeTaxes">
+        <link:definition>1082 - Disclosure - Reconciliation of Statutory Federal Income Tax Rates to Provision for Income Taxes (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureReconciliationOfStatutoryFederalIncomeTaxRatesToProvisionForIncomeTaxesParenthetical" id="DisclosureReconciliationOfStatutoryFederalIncomeTaxRatesToProvisionForIncomeTaxesParenthetical">
+        <link:definition>1083 - Disclosure - Reconciliation of Statutory Federal Income Tax Rates to Provision for Income Taxes (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfUnrecognizedTaxBenefits" id="DisclosureScheduleOfUnrecognizedTaxBenefits">
+        <link:definition>1084 - Disclosure - Schedule of Unrecognized Tax Benefits (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfTaxYearsSubjectToExamination" id="DisclosureSummaryOfTaxYearsSubjectToExamination">
+        <link:definition>1085 - Disclosure - Summary of Tax Years Subject to Examination (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfTaxYearsSubjectToExaminationParenthetical" id="DisclosureSummaryOfTaxYearsSubjectToExaminationParenthetical">
+        <link:definition>1086 - Disclosure - Summary of Tax Years Subject to Examination (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureCommonAndPreferredStockAdditionalInformation" id="DisclosureCommonAndPreferredStockAdditionalInformation">
+        <link:definition>1087 - Disclosure - Common and Preferred Stock - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureShareBasedAwardsAdditionalInformation" id="DisclosureShareBasedAwardsAdditionalInformation">
+        <link:definition>1088 - Disclosure - Share Based Awards - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfShareBasedAwardsGrantedDuringPeriod" id="DisclosureSummaryOfShareBasedAwardsGrantedDuringPeriod">
+        <link:definition>1089 - Disclosure - Summary of Share-Based Awards Granted During Period (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfShareBasedAwardsGrantedDuringPeriodParenthetical" id="DisclosureSummaryOfShareBasedAwardsGrantedDuringPeriodParenthetical">
+        <link:definition>1090 - Disclosure - Summary of Share-Based Awards Granted During Period (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureShareBasedCompensationExpense" id="DisclosureShareBasedCompensationExpense">
+        <link:definition>1091 - Disclosure - Share-Based Compensation Expense (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureTotalFairValueOfStockOptionsRecognized" id="DisclosureTotalFairValueOfStockOptionsRecognized">
+        <link:definition>1092 - Disclosure - Total Fair Value of Stock Options Recognized (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfStockOptionActivity" id="DisclosureSummaryOfStockOptionActivity">
+        <link:definition>1093 - Disclosure - Summary of Stock Option Activity (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfOutstandingAndExercisableStockOptions" id="DisclosureSummaryOfOutstandingAndExercisableStockOptions">
+        <link:definition>1094 - Disclosure - Summary Of Outstanding And Exercisable Stock Options (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureIntrinsicValueOfStockOptionsExercised" id="DisclosureIntrinsicValueOfStockOptionsExercised">
+        <link:definition>1095 - Disclosure - Intrinsic Value of Stock Options Exercised (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureIntrinsicValueOfStockOptionsExercisedParenthetical" id="DisclosureIntrinsicValueOfStockOptionsExercisedParenthetical">
+        <link:definition>1096 - Disclosure - Intrinsic Value of Stock Options Exercised (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfFairValueOfOptionsGranted" id="DisclosureSummaryOfFairValueOfOptionsGranted">
+        <link:definition>1097 - Disclosure - Summary of Fair Value of Options Granted (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfFairValueOfOptionsGrantedParenthetical" id="DisclosureSummaryOfFairValueOfOptionsGrantedParenthetical">
+        <link:definition>1098 - Disclosure - Summary of Fair Value of Options Granted (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureTotalFairValueServicePerformanceBasedAwardsRecognized" id="DisclosureTotalFairValueServicePerformanceBasedAwardsRecognized">
+        <link:definition>1099 - Disclosure - Total Fair Value Service Performance Based Awards Recognized (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureActivityForServiceBasedShareUnits" id="DisclosureActivityForServiceBasedShareUnits">
+        <link:definition>1100 - Disclosure - Activity for Service-Based Share Units (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureActivityForServiceBasedShareUnitsParenthetical" id="DisclosureActivityForServiceBasedShareUnitsParenthetical">
+        <link:definition>1101 - Disclosure - Activity for Service-Based Share Units (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureIntrinsicValueOfServiceBasedAwards" id="DisclosureIntrinsicValueOfServiceBasedAwards">
+        <link:definition>1102 - Disclosure - Intrinsic Value Of Service - Based Awards (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureIntrinsicValueOfServiceBasedAwardsParenthetical" id="DisclosureIntrinsicValueOfServiceBasedAwardsParenthetical">
+        <link:definition>1103 - Disclosure - Intrinsic Value Of Service - Based Awards (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureTotalIntrinsicValueOfServiceBasedAwards" id="DisclosureTotalIntrinsicValueOfServiceBasedAwards">
+        <link:definition>1104 - Disclosure - Total Intrinsic value of Service-Based Awards (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureActivityForPerformanceBasedShareUnits" id="DisclosureActivityForPerformanceBasedShareUnits">
+        <link:definition>1105 - Disclosure - Activity For Performance-Based Share Units (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureTotalFairValueOfServicePerformanceBasedAwardsRecognized" id="DisclosureTotalFairValueOfServicePerformanceBasedAwardsRecognized">
+        <link:definition>1106 - Disclosure - Total Fair Value Of Service/Performance-Based Awards Recognized (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureTotalFairValueOfPerformanceBasedAwardsVesting" id="DisclosureTotalFairValueOfPerformanceBasedAwardsVesting">
+        <link:definition>1107 - Disclosure - Total Fair Value Of Performance-Based Awards Vesting (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfFutureMinimumLeasePaymentsRequiredUnderOperatingLeases" id="DisclosureScheduleOfFutureMinimumLeasePaymentsRequiredUnderOperatingLeases">
+        <link:definition>1108 - Disclosure - Schedule Of Future Minimum Lease Payments Required Under Operating Leases (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureRentExpenseUnderOperatingLeases" id="DisclosureRentExpenseUnderOperatingLeases">
+        <link:definition>1109 - Disclosure - Rent Expense Under Operating Leases (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfDefinedBenefitPlansDisclosures" id="DisclosureScheduleOfDefinedBenefitPlansDisclosures">
+        <link:definition>1110 - Disclosure - Schedule of Defined Benefit Plans Disclosures (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureShareRepurchaseProgramsAdditionalInformation" id="DisclosureShareRepurchaseProgramsAdditionalInformation">
+        <link:definition>1111 - Disclosure - Share Repurchase Programs - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureFairValueOfAssetsAndLiabilitiesAcquired" id="DisclosureFairValueOfAssetsAndLiabilitiesAcquired">
+        <link:definition>1112 - Disclosure - Fair Value of Assets and Liabilities Acquired (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureFairValueOfAssetsAndLiabilitiesAcquiredParenthetical" id="DisclosureFairValueOfAssetsAndLiabilitiesAcquiredParenthetical">
+        <link:definition>1113 - Disclosure - Fair Value of Assets and Liabilities Acquired (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureInvestmentsMeasuredAtFairValue" id="DisclosureInvestmentsMeasuredAtFairValue">
+        <link:definition>1114 - Disclosure - Investments Measured at Fair Value (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureInvestmentsMeasuredAtFairValueParenthetical" id="DisclosureInvestmentsMeasuredAtFairValueParenthetical">
+        <link:definition>1115 - Disclosure - Investments Measured at Fair Value (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfStatedMaturitiesOfInvestmentInDebtSecurities" id="DisclosureSummaryOfStatedMaturitiesOfInvestmentInDebtSecurities">
+        <link:definition>1116 - Disclosure - Summary of Stated Maturities of Investment in Debt Securities (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureReconciliationOfNumeratorsAndDenominatorsOfEarningsPerShareCalculation" id="DisclosureReconciliationOfNumeratorsAndDenominatorsOfEarningsPerShareCalculation">
+        <link:definition>1117 - Disclosure - Reconciliation of Numerators and Denominators of Earnings Per Share Calculation (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSharesConsideredAntiDilutiveForCalculatingDilutedEPS" id="DisclosureSharesConsideredAntiDilutiveForCalculatingDilutedEPS">
+        <link:definition>1118 - Disclosure - Shares Considered Anti-Dilutive for Calculating Diluted EPS (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfRevenueIncomeLossFromOperationsTotalAssetsAndTotalCashCashEquivalentsAndAvailableforSaleInvestmentSecuritiesByGeographicSegments" id="DisclosureSummaryOfRevenueIncomeLossFromOperationsTotalAssetsAndTotalCashCashEquivalentsAndAvailableforSaleInvestmentSecuritiesByGeographicSegments">
+        <link:definition>1119 - Disclosure - Summary of Revenue, Income (Loss) from Operations, Total Assets and Total Cash, Cash Equivalents and Available-for-Sale Investment Securities by Geographic Segments (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfRevenueFromUnaffiliatedCustomers" id="DisclosureSummaryOfRevenueFromUnaffiliatedCustomers">
+        <link:definition>1120 - Disclosure - Summary of Revenue from Unaffiliated Customers (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSegmentReportingAdditionalInformation" id="DisclosureSegmentReportingAdditionalInformation">
+        <link:definition>1121 - Disclosure - Segment Reporting - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfTangibleLongLivedAssets" id="DisclosureSummaryOfTangibleLongLivedAssets">
+        <link:definition>1122 - Disclosure - Summary of Tangible Long-Lived Assets (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfSubscriptionAndServicesRevenueByTechnologyClasses" id="DisclosureSummaryOfSubscriptionAndServicesRevenueByTechnologyClasses">
+        <link:definition>1123 - Disclosure - Summary of Subscription and Services Revenue by Technology Classes (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureOtherLongTermObligation" id="DisclosureOtherLongTermObligation">
+        <link:definition>1124 - Disclosure - Other Long-Term Obligation (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureConvertibleNotesAdditionalInformation" id="DisclosureConvertibleNotesAdditionalInformation">
+        <link:definition>1125 - Disclosure - Convertible Notes - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureComponentsOfConvertibleNotes" id="DisclosureComponentsOfConvertibleNotes">
+        <link:definition>1126 - Disclosure - Components of Convertible Notes (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfTotalInterestExpenseRecognizedRelatedToConvertibleNotes" id="DisclosureScheduleOfTotalInterestExpenseRecognizedRelatedToConvertibleNotes">
+        <link:definition>1127 - Disclosure - Schedule of Total Interest Expense Recognized Related to Convertible Notes (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfTotalInterestExpenseRecognizedRelatedToConvertibleNotesParenthetical" id="DisclosureScheduleOfTotalInterestExpenseRecognizedRelatedToConvertibleNotesParenthetical">
+        <link:definition>1128 - Disclosure - Schedule of Total Interest Expense Recognized Related to Convertible Notes (Parenthetical) (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureFairValueOfNotesBasedOnInputsObservableInMarketLevel2AndCarryingValueOfDebtInstruments" id="DisclosureFairValueOfNotesBasedOnInputsObservableInMarketLevel2AndCarryingValueOfDebtInstruments">
+        <link:definition>1129 - Disclosure - Fair Value of Notes Based on Inputs Observable in Market (Level 2) and Carrying Value of Debt Instruments (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSummaryOfAccumulatedOtherComprehensiveLoss" id="DisclosureSummaryOfAccumulatedOtherComprehensiveLoss">
+        <link:definition>1130 - Disclosure - Summary of Accumulated Other Comprehensive Loss (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureScheduleOfUnauditedQuarterlyResults" id="DisclosureScheduleOfUnauditedQuarterlyResults">
+        <link:definition>1131 - Disclosure - Schedule of Unaudited Quarterly Results (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureSubsequentEventsAdditionalInformation" id="DisclosureSubsequentEventsAdditionalInformation">
+        <link:definition>1132 - Disclosure - Subsequent Events - Additional Information (Detail)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:roleType roleURI="http://www.redhat.com/taxonomy/role/DisclosureGrossAndNetDeferredTaxAssetAndLiabilityPositionsAlternate1" id="DisclosureGrossAndNetDeferredTaxAssetAndLiabilityPositionsAlt1">
+        <link:definition>1133 - Disclosure - Gross and Net Deferred Tax Asset and Liability Positions (Detail) (Alternate 1)</link:definition>
+        <link:usedOn>link:calculationLink</link:usedOn>
+        <link:usedOn>link:presentationLink</link:usedOn>
+        <link:usedOn>link:definitionLink</link:usedOn>
+      </link:roleType>
+      <link:linkbaseRef xlink:type="simple" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef" xlink:href="rht-20150228_cal.xml" xlink:title="Calculation Links, all"/>
+      <link:linkbaseRef xlink:type="simple" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef" xlink:href="rht-20150228_def.xml" xlink:title="Definition Links, all"/>
+      <link:linkbaseRef xlink:type="simple" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef" xlink:href="rht-20150228_lab.xml" xlink:title="Label Links, all"/>
+      <link:linkbaseRef xlink:type="simple" xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef" xlink:href="rht-20150228_pre.xml" xlink:title="Presentation Links, all"/>
+    </appinfo>
+  </annotation>
+  <import namespace="http://www.xbrl.org/2003/instance" schemaLocation="http://www.xbrl.org/2003/xbrl-instance-2003-12-31.xsd"/>
+  <import namespace="http://www.xbrl.org/2003/linkbase" schemaLocation="http://www.xbrl.org/2003/xbrl-linkbase-2003-12-31.xsd"/>
+  <import namespace="http://fasb.org/us-types/2014-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2014/elts/us-types-2014-01-31.xsd"/>
+  <import namespace="http://www.xbrl.org/dtr/type/non-numeric" schemaLocation="http://www.xbrl.org/dtr/type/nonNumeric-2009-12-16.xsd"/>
+  <import namespace="http://www.xbrl.org/dtr/type/numeric" schemaLocation="http://www.xbrl.org/dtr/type/numeric-2009-12-16.xsd"/>
+  <import namespace="http://xbrl.org/2005/xbrldt" schemaLocation="http://www.xbrl.org/2005/xbrldt-2005.xsd"/>
+  <import namespace="http://fasb.org/us-gaap/2014-01-31" schemaLocation="http://xbrl.fasb.org/us-gaap/2014/elts/us-gaap-2014-01-31.xsd"/>
+  <import namespace="http://xbrl.sec.gov/country/2013-01-31" schemaLocation="http://xbrl.sec.gov/country/2013/country-2013-01-31.xsd"/>
+  <import namespace="http://xbrl.sec.gov/currency/2014-01-31" schemaLocation="http://xbrl.sec.gov/currency/2014/currency-2014-01-31.xsd"/>
+  <import namespace="http://xbrl.sec.gov/dei/2014-01-31" schemaLocation="http://xbrl.sec.gov/dei/2014/dei-2014-01-31.xsd"/>
+  <import namespace="http://xbrl.sec.gov/exch/2014-01-31" schemaLocation="http://xbrl.sec.gov/exch/2014/exch-2014-01-31.xsd"/>
+  <import namespace="http://xbrl.sec.gov/invest/2013-01-31" schemaLocation="http://xbrl.sec.gov/invest/2013/invest-2013-01-31.xsd"/>
+  <import namespace="http://xbrl.sec.gov/naics/2011-01-31" schemaLocation="http://xbrl.sec.gov/naics/2011/naics-2011-01-31.xsd"/>
+  <import namespace="http://xbrl.sec.gov/sic/2011-01-31" schemaLocation="http://xbrl.sec.gov/sic/2011/sic-2011-01-31.xsd"/>
+  <import namespace="http://xbrl.sec.gov/stpr/2011-01-31" schemaLocation="http://xbrl.sec.gov/stpr/2011/stpr-2011-01-31.xsd"/>
+  <element name="AccountsPayableAndAccruedLiabilitiesLineItems" id="rht_AccountsPayableAndAccruedLiabilitiesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="AccountsPayableAndAccruedLiabilitiesTable" id="rht_AccountsPayableAndAccruedLiabilitiesTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="AccumulatedOtherComprehensiveIncomeLossForeignCurrencyTranslationAdjustmentsBeforeTax" id="rht_AccumulatedOtherComprehensiveIncomeLossForeignCurrencyTranslationAdjustmentsBeforeTax" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="credit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="AcquiredFiniteLivedIntangibleAssetWeightedAverageUsefulLifeIndefinite" id="rht_AcquiredFiniteLivedIntangibleAssetWeightedAverageUsefulLifeIndefinite" type="xbrli:stringItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="AdjustmentsToAdditionalPaidInCapitalEmployeeShareBasedCompensationAwardsFromAcquisitions" id="rht_AdjustmentsToAdditionalPaidInCapitalEmployeeShareBasedCompensationAwardsFromAcquisitions" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="duration" xbrli:balance="credit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="AdjustmentsToAdditionalPaidInCapitalPurchaseOfConvertibleNoteHedge" id="rht_AdjustmentsToAdditionalPaidInCapitalPurchaseOfConvertibleNoteHedge" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="duration" xbrli:balance="credit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ApplicationsDevelopmentRelatedAndOtherEmergingTechnologySubscriptionsMember" id="rht_ApplicationsDevelopmentRelatedAndOtherEmergingTechnologySubscriptionsMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="AvailableForSaleSecuritiesDebtMaturitiesMoreThanFiveYearsFairValue" id="rht_AvailableForSaleSecuritiesDebtMaturitiesMoreThanFiveYearsFairValue" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="AvailableForSaleSecuritiesDebtMaturitiesOneAndThreeYearsFairvalue" id="rht_AvailableForSaleSecuritiesDebtMaturitiesOneAndThreeYearsFairvalue" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="AvailableForSaleSecuritiesDebtMaturitiesThreeAndFiveYearsFairvalue" id="rht_AvailableForSaleSecuritiesDebtMaturitiesThreeAndFiveYearsFairvalue" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="BusinessAcquisitionFairValueOfUnvestedEmployeeShareBasedAwardsAssumed" id="rht_BusinessAcquisitionFairValueOfUnvestedEmployeeShareBasedAwardsAssumed" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="BusinessAcquisitionOperatingResultsSinceAcquisitionDateTableTextBlock" id="rht_BusinessAcquisitionOperatingResultsSinceAcquisitionDateTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="BusinessAcquisitionProFormaInformationLineItems" id="rht_BusinessAcquisitionProFormaInformationLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="BusinessAcquisitionProFormaInformationTable" id="rht_BusinessAcquisitionProFormaInformationTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="BusinessCombinationCompensationExpenseRecognizedOfAssumedNonvestedShareBasedAwards" id="rht_BusinessCombinationCompensationExpenseRecognizedOfAssumedNonvestedShareBasedAwards" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="BusinessCombinationTotalNonvestedShareBasedAwardsAssumed" id="rht_BusinessCombinationTotalNonvestedShareBasedAwardsAssumed" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CashAndCashEquivalentsAndInvestments" id="rht_CashAndCashEquivalentsAndInvestments" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CashAndCashEquivalentsMaximumMaturityPeriod" id="rht_CashAndCashEquivalentsMaximumMaturityPeriod" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CashPaidDuringPeriodAbstract" id="rht_CashPaidDuringPeriodAbstract" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CommitmentsAndContingenciesDisclosureLineItems" id="rht_CommitmentsAndContingenciesDisclosureLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CommitmentsAndContingenciesDisclosureTable" id="rht_CommitmentsAndContingenciesDisclosureTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="CommitmentsAndContingenciesLineItems" id="rht_CommitmentsAndContingenciesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CommitmentsAndContingenciesTable" id="rht_CommitmentsAndContingenciesTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="CommonStockPerformancePeriod" id="rht_CommonStockPerformancePeriod" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CommonStockVotesPerShare" id="rht_CommonStockVotesPerShare" type="xbrli:decimalItemType" abstract="false" xbrli:periodType="instant" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ComponentsOfDeferredIncomeTaxAssetsAndLiabilitiesLineItems" id="rht_ComponentsOfDeferredIncomeTaxAssetsAndLiabilitiesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ComponentsOfDeferredIncomeTaxAssetsAndLiabilitiesTable" id="rht_ComponentsOfDeferredIncomeTaxAssetsAndLiabilitiesTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="ComponentsOfDeferredTaxAssetsAndLiabilitiesLineItems" id="rht_ComponentsOfDeferredTaxAssetsAndLiabilitiesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ComponentsOfDeferredTaxAssetsAndLiabilitiesTable" id="rht_ComponentsOfDeferredTaxAssetsAndLiabilitiesTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="ComponentsOfIncomeTaxExpenseBenefitLineItems" id="rht_ComponentsOfIncomeTaxExpenseBenefitLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ComponentsOfIncomeTaxExpenseBenefitTable" id="rht_ComponentsOfIncomeTaxExpenseBenefitTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="ComputerSoftwareMember" id="rht_ComputerSoftwareMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ConsultingServicesMember" id="rht_ConsultingServicesMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CovenantsNotToCompeteMember" id="rht_CovenantsNotToCompeteMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CustomerAndResellerRelationshipsMember" id="rht_CustomerAndResellerRelationshipsMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CustomerCreditTerm" id="rht_CustomerCreditTerm" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CustomerCreditTermMaximum" id="rht_CustomerCreditTermMaximum" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="CustomerCreditTermMinimum" id="rht_CustomerCreditTermMinimum" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="DebtInstrumentNoteComponentAxis" id="rht_DebtInstrumentNoteComponentAxis" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:dimensionItem"/>
+  <element name="DebtInstrumentNoteComponentDomain" id="rht_DebtInstrumentNoteComponentDomain" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="DeferredCommissions" id="rht_DeferredCommissions" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="DeferredCostsCapitalizedPrepaidAndOtherAssetsDisclosureLineItems" id="rht_DeferredCostsCapitalizedPrepaidAndOtherAssetsDisclosureLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="DeferredCostsCapitalizedPrepaidAndOtherAssetsDisclosureTable" id="rht_DeferredCostsCapitalizedPrepaidAndOtherAssetsDisclosureTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="DeferredTaxAssetsConvertibleDebt" id="rht_DeferredTaxAssetsConvertibleDebt" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="DeferredTaxExpenseBenefit" id="rht_DeferredTaxExpenseBenefit" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="duration" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="DeferredTaxLiabilitiesGoodwillAndIntangibleAssetsIntangibleAndFixedAssets" id="rht_DeferredTaxLiabilitiesGoodwillAndIntangibleAssetsIntangibleAndFixedAssets" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="credit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="DevelopedTechnologyMember" id="rht_DevelopedTechnologyMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="DocumentAndEntityInformationAbstract" id="rht_DocumentAndEntityInformationAbstract" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="EarningsPerShareLineItems" id="rht_EarningsPerShareLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="EarningsPerShareTable" id="rht_EarningsPerShareTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="EnovanceMember" id="rht_EnovanceMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="EntityWideDisclosureOnGeographicAreasRevenueFromExternalCustomersAttributedToForeignCountriesPercentage" id="rht_EntityWideDisclosureOnGeographicAreasRevenueFromExternalCustomersAttributedToForeignCountriesPercentage" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="EquityComponentMember" id="rht_EquityComponentMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasis" id="rht_FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasis" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisLineItems" id="rht_FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisTable" id="rht_FairValueAssetsAndLiabilitiesMeasuredOnRecurringBasisTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="FeedHenryEnovanceAndInktankStorageIncMember" id="rht_FeedHenryEnovanceAndInktankStorageIncMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="FeedHenryMember" id="rht_FeedHenryMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="FiniteLivedIntangibleAssetsAmortizationExpenseLineItems" id="rht_FiniteLivedIntangibleAssetsAmortizationExpenseLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="FiniteLivedIntangibleLiabilitiesLineItems" id="rht_FiniteLivedIntangibleLiabilitiesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="FirstPerformanceSegmentMember" id="rht_FirstPerformanceSegmentMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ForeignMember" id="rht_ForeignMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="GoodwillTranslationAndOtherAdjustments" id="rht_GoodwillTranslationAndOtherAdjustments" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="duration" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="IncomeTaxesLineItems" id="rht_IncomeTaxesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="IncomeTaxesTable" id="rht_IncomeTaxesTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="IncomeTaxExaminationYearsSubjectToExamination" id="rht_IncomeTaxExaminationYearsSubjectToExamination" type="us-types:durationStringItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="IncomeTaxHolidayExemptionPeriod" id="rht_IncomeTaxHolidayExemptionPeriod" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="IncomeTaxHolidayReductionPeriod" id="rht_IncomeTaxHolidayReductionPeriod" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="IncomeTaxReconciliationDomesticProductionActivitiesDeduction" id="rht_IncomeTaxReconciliationDomesticProductionActivitiesDeduction" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="duration" xbrli:balance="credit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="IncomeTaxYearsOpen" id="rht_IncomeTaxYearsOpen" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="InfrastructureRelatedSubscriptionsMember" id="rht_InfrastructureRelatedSubscriptionsMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="InktankStorageIncMember" id="rht_InktankStorageIncMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="KeyEmployeesMember" id="rht_KeyEmployeesMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="LiabilityComponentMember" id="rht_LiabilityComponentMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ManageiqIncMember" id="rht_ManageiqIncMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="NonvestedSharesMember" id="rht_NonvestedSharesMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="NumberOfCustomersFromWhichCompanyGeneratedTenPercentOfRevenueOrGreater" id="rht_NumberOfCustomersFromWhichCompanyGeneratedTenPercentOfRevenueOrGreater" type="xbrli:integerItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="NumberOfIndividualCustomersAccountingForMoreThanTenPercentOfAccountsReceivable" id="rht_NumberOfIndividualCustomersAccountingForMoreThanTenPercentOfAccountsReceivable" type="xbrli:integerItemType" abstract="false" xbrli:periodType="instant" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="NumberOfLocationsOfOffices" id="rht_NumberOfLocationsOfOffices" type="xbrli:integerItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="OperatingLossCarryforwardsAxis" id="rht_OperatingLossCarryforwardsAxis" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:dimensionItem"/>
+  <element name="OperatingLossCarryforwardsDomain" id="rht_OperatingLossCarryforwardsDomain" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="OtherAcquisitionsMember" id="rht_OtherAcquisitionsMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="OtherAssetsLineItems" id="rht_OtherAssetsLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="OtherAssetsTable" id="rht_OtherAssetsTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="OtherLongTermLiabilitiesLineItems" id="rht_OtherLongTermLiabilitiesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="OtherLongTermLiabilitiesTable" id="rht_OtherLongTermLiabilitiesTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="PerformanceShareUnitsMember" id="rht_PerformanceShareUnitsMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="PremiumOverClosingPriceOfCompanysSharesOfCommonStockIncludedInStrikePrice" id="rht_PremiumOverClosingPriceOfCompanysSharesOfCommonStockIncludedInStrikePrice" type="num:percentItemType" abstract="false" xbrli:periodType="instant" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="PrepaidExpenseTextBlock" id="rht_PrepaidExpenseTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="PrepaidServices" id="rht_PrepaidServices" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="PrincipalAmountPerNoteUsedInConversionRate" id="rht_PrincipalAmountPerNoteUsedInConversionRate" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="credit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="QuarterlyFinancialInformationLineItems" id="rht_QuarterlyFinancialInformationLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="QuarterlyFinancialInformationTable" id="rht_QuarterlyFinancialInformationTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="RangeFiveMember" id="rht_RangeFiveMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="RangeFourMember" id="rht_RangeFourMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="RangeOneMember" id="rht_RangeOneMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="RangeSixMember" id="rht_RangeSixMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="RangeThreeMember" id="rht_RangeThreeMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="RangeTwoMember" id="rht_RangeTwoMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ReconciliationOfEffectiveIncomeTaxRateTable" id="rht_ReconciliationOfEffectiveIncomeTaxRateTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="ReconciliationOfUnrecognizedTaxBenefitsLineItems" id="rht_ReconciliationOfUnrecognizedTaxBenefitsLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ReconciliationOfUnrecognizedTaxBenefitsTable" id="rht_ReconciliationOfUnrecognizedTaxBenefitsTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="RenewalPeriodMaximum" id="rht_RenewalPeriodMaximum" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="RenewalPeriodMinimum" id="rht_RenewalPeriodMinimum" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="RetentionIncentivesAnnualVestingPercentage" id="rht_RetentionIncentivesAnnualVestingPercentage" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfCommonStockAsConvertedLineItems" id="rht_ScheduleOfCommonStockAsConvertedLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfDeferredTaxAssetsAndLiabilitiesNetClassificationTableTextBlock" id="rht_ScheduleOfDeferredTaxAssetsAndLiabilitiesNetClassificationTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfDepreciationExpenseTableTextBlock" id="rht_ScheduleOfDepreciationExpenseTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfEffectiveTaxRateReconciliationLineItems" id="rht_ScheduleOfEffectiveTaxRateReconciliationLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfFiniteLivedIntangibleAssetsAmortizationExpenseTable" id="rht_ScheduleOfFiniteLivedIntangibleAssetsAmortizationExpenseTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="ScheduleOfIncomeBeforeIncomeTaxLineItems" id="rht_ScheduleOfIncomeBeforeIncomeTaxLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfIncomeBeforeIncomeTaxTable" id="rht_ScheduleOfIncomeBeforeIncomeTaxTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="ScheduleOfMarketableSecuritiesLineItems" id="rht_ScheduleOfMarketableSecuritiesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfMarketableSecuritiesTable" id="rht_ScheduleOfMarketableSecuritiesTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="ScheduleOfNonvestedServiceBasedUnitsActivityTableTextBlock" id="rht_ScheduleOfNonvestedServiceBasedUnitsActivityTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfShareBasedCompensationArrangementByShareBasedPaymentAwardAwardTypeAndPlanNamesAxis" id="rht_ScheduleOfShareBasedCompensationArrangementByShareBasedPaymentAwardAwardTypeAndPlanNamesAxis" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:dimensionItem"/>
+  <element name="ScheduleOfShareBasedCompensationArrangementByShareBasedPaymentAwardAwardTypeAndPlansNameDomain" id="rht_ScheduleOfShareBasedCompensationArrangementByShareBasedPaymentAwardAwardTypeAndPlansNameDomain" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ScheduleOfShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedAndExpectedToVestOutstandingTableTextBlock" id="rht_ScheduleOfShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedAndExpectedToVestOutstandingTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="SecondPerformanceSegmentMember" id="rht_SecondPerformanceSegmentMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="SeniorSubordinatedNotesRepurchasedPercentageOfPrincipalAmount" id="rht_SeniorSubordinatedNotesRepurchasedPercentageOfPrincipalAmount" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ServiceBasedShareUnitsMember" id="rht_ServiceBasedShareUnitsMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementAssumptionsUsedToEstimateFairValuesOfShareOptionsGrantedLineItems" id="rht_ShareBasedCompensationArrangementAssumptionsUsedToEstimateFairValuesOfShareOptionsGrantedLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementAssumptionsUsedToEstimateFairValuesOfShareOptionsGrantedTable" id="rht_ShareBasedCompensationArrangementAssumptionsUsedToEstimateFairValuesOfShareOptionsGrantedTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardVestingPercentage" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardVestingPercentage" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardVestingPercentageOnFirstAnniversary" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardVestingPercentageOnFirstAnniversary" type="num:percentItemType" abstract="false" xbrli:periodType="instant" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedVestingAggregateIntrinsicValueTableTextBlock" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedVestingAggregateIntrinsicValueTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedVestingFairValueTableTextBlock" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedVestingFairValueTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedAndExpectedToVestNumber" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedAndExpectedToVestNumber" type="xbrli:sharesItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodTotalFairValueTableTextBlock" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodTotalFairValueTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsHistoricalVolatilityTerm" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardFairValueAssumptionsHistoricalVolatilityTerm" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsAssumedInPeriod" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsAssumedInPeriod" type="xbrli:sharesItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsAssumedInPeriodWeightedAverageExercisePrice" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsAssumedInPeriodWeightedAverageExercisePrice" type="num:perShareItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriodTotalIntrinsicValueTableTextBlock" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsExercisesInPeriodTotalIntrinsicValueTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsFairValueRecognized" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsFairValueRecognized" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsFairValueRecognizedTableTextBlock" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsFairValueRecognizedTableTextBlock" type="nonnum:textBlockItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsVestedAndExpectedToVestAnnualForfeitureRate" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOptionsVestedAndExpectedToVestAnnualForfeitureRate" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsExpectedToVestAggregateIntrinsicValue" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsExpectedToVestAggregateIntrinsicValue" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="instant" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsExpectedToVestNumber" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsExpectedToVestNumber" type="xbrli:sharesItemType" abstract="false" xbrli:periodType="instant" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsExpectedToVestWeightedAverageRemainingVestingPeriod" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsExpectedToVestWeightedAverageRemainingVestingPeriod" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsOutstandingWeightedAverageRemainingVestingPeriod" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsOutstandingWeightedAverageRemainingVestingPeriod" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsVestedAndExpectedToVestAnnualForfeitureRate" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardOtherThanOptionsVestedAndExpectedToVestAnnualForfeitureRate" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardPartiallyVestedOptionsAssumedInBusinessCombinationsInPeriod" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardPartiallyVestedOptionsAssumedInBusinessCombinationsInPeriod" type="xbrli:sharesItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardPartiallyVestedOptionsAssumedInBusinessCombinationsInPeriodWeightedAverageGrantDateFairValue" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardPartiallyVestedOptionsAssumedInBusinessCombinationsInPeriodWeightedAverageGrantDateFairValue" type="num:perShareItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentageIncreaseInCommonStockPricePlusDividendPayable" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentageIncreaseInCommonStockPricePlusDividendPayable" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentageOfAwardVestedAfterOneYear" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentageOfAwardVestedAfterOneYear" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentageOfAwardVestedEveryThreeMonthsFollowingYearOne" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardPercentageOfAwardVestedEveryThreeMonthsFollowingYearOne" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardTotalSharesGrantedInPeriod" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardTotalSharesGrantedInPeriod" type="xbrli:sharesItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardTotalSharesGrantedInPeriodWeightedAverageGrantDateFairValue" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardTotalSharesGrantedInPeriodWeightedAverageGrantDateFairValue" type="num:perShareItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareBasedCompensationArrangementByShareBasedPaymentAwardVestingPercentageYearFour" id="rht_ShareBasedCompensationArrangementByShareBasedPaymentAwardVestingPercentageYearFour" type="num:percentItemType" abstract="false" xbrli:periodType="instant" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareholdersEquityTable" id="rht_ShareholdersEquityTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="SharePricePerformancePeriodMember" id="rht_SharePricePerformancePeriodMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ShareUnitsMember" id="rht_ShareUnitsMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="SignificantAccountingPoliciesLineItems" id="rht_SignificantAccountingPoliciesLineItems" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="SignificantAccountingPoliciesTable" id="rht_SignificantAccountingPoliciesTable" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrldt:hypercubeItem"/>
+  <element name="StockBasedCompensationMember" id="rht_StockBasedCompensationMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="StockRepurchasedDuringPeriodAsPercentageOfAcceleratedShareRepurchase" id="rht_StockRepurchasedDuringPeriodAsPercentageOfAcceleratedShareRepurchase" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="SubscriptionsPeriodMaximum" id="rht_SubscriptionsPeriodMaximum" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="SubscriptionsPeriodMinimum" id="rht_SubscriptionsPeriodMinimum" type="xbrli:durationItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="TargetedPercentageOfPerformanceShareUnitEarnedByExecutive" id="rht_TargetedPercentageOfPerformanceShareUnitEarnedByExecutive" type="num:percentItemType" abstract="false" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="TrademarksCopyrightsAndPatentsMember" id="rht_TrademarksCopyrightsAndPatentsMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="TrainingServicesMember" id="rht_TrainingServicesMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="TwoThousandsFourPlanMember" id="rht_TwoThousandsFourPlanMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="UncategorizedAbstract" id="rht_UncategorizedAbstract" type="xbrli:stringItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="UnrecognizedTaxBenefitsDecreasesResultingFromChangesInFactsAndCircumstances" id="rht_UnrecognizedTaxBenefitsDecreasesResultingFromChangesInFactsAndCircumstances" type="xbrli:monetaryItemType" abstract="false" xbrli:periodType="duration" xbrli:balance="debit" nillable="true" substitutionGroup="xbrli:item"/>
+  <element name="ZeroPointTwoFivePercentConvertibleSeniorNotesDueOctoberOneTwoThousandNineteenMember" id="rht_ZeroPointTwoFivePercentConvertibleSeniorNotesDueOctoberOneTwoThousandNineteenMember" type="nonnum:domainItemType" abstract="true" xbrli:periodType="duration" nillable="true" substitutionGroup="xbrli:item"/>
+</schema>

@@ -1,0 +1,242 @@
+changes to make: 
+       add detailed error on required package: pg8000 
+
+
+goal: 
+    find the fact table entries for the financial statement entries that we need
+    
+  
+
+    network_ids: 81, 114, 197, 261 376 383
+
+
+
+To find all the statements first go to the network table. 
+
+    select * from network
+    order by description, network_id;
+    
+There you will find a set of networks that make up each statement. 
+
+For example, the statement of CASH FLOWS. 
+
+network_id | accession_id | extended_link_qname_id | extended_link_role_uri_id | arc_qname_id | arcrole_uri_id |                  description                      
+                                                                      
+
+         81 |            1 |                   8837 |                       163 |         2575 |            297 | 1008 - Statement - Consolidated Statements of Cash Flows
+        114 |            1 |                   8837 |                       163 |         2575 |            630 | 1008 - Statement - Consolidated Statements of Cash Flows
+        197 |            1 |                   8018 |                       163 |        14054 |            156 | 1008 - Statement - Consolidated Statements of Cash Flows
+        261 |            1 |                   8837 |                       163 |         2575 |            260 | 1008 - Statement - Consolidated Statements of Cash Flows
+        376 |            1 |                   8837 |                       163 |         2575 |            669 | 1008 - Statement - Consolidated Statements of Cash Flows
+        383 |            1 |                  16125 |                       163 |        15882 |            572 | 1008 - Statement - Consolidated Statements of Cash Flows
+
+Let's examine network 81.
+(network 383 seems to have the most detailed structure... )
+ 
+    
+xbrl=# select * from relationship where network_id=81; 
+ relationship_id | network_id | from_element_id | to_element_id | reln_order | from_resource_id | to_resource_id | calculation_weight | tree_sequence | tree_depth | preferred_label_role_uri_id 
+-----------------+------------+-----------------+---------------+------------+------------------+----------------+--------------------+---------------+------------+-----------------------------
+             395 |         81 |           13463 |         14853 |       1.02 |                  |                |                    |             1 |          1 |                            
+             396 |         81 |           14853 |         17104 |       1.38 |                  |                |                    |             2 |          2 |                            
+             397 |         81 |           14853 |          1476 |       1.39 |                  |                |                    |             3 |          2 |                            
+             398 |         81 |            1476 |         20617 |        1.1 |                  |                |                    |             4 |          3 |                               
+....
+
+The relationships table shows the different elements are are aggregated into each larger element. 
+For network 81, the top element is 13463 and it has a total of 43 elements. With a max depth of 4. 
+all the elements that go from 13463 have a tree_depth of 1... 
+
+13463
+    14853
+        17104
+        1476
+            20617
+            10772
+            15200
+            ...
+        13443
+        ...
+    4642
+    15289
+    12097
+    
+    
+the elements table provides more details 
+    xbrl=# select * from element where element_id = 13463;
+     element_id | qname_id | datatype_qname_id | xbrl_base_datatype_qname_id | balance_id | period_type_id | substitution_group_qname_id | abstract | nillable | document_id | is_numeric | is_monetary 
+    ------------+----------+-------------------+-----------------------------+------------+----------------+-----------------------------+----------+----------+-------------+------------+-------------
+          13463 |    20368 |             21193 |                       21193 |            |              2 |                        1722 | t        | t        |          13 | f          | f
+    (1 row)
+
+    xbrl=# select * from qname where qname_id = 20368;
+     qname_id |             namespace              |     local_name     
+    ----------+------------------------------------+--------------------
+        20368 | http://fasb.org/us-gaap/2014-01-31 | StatementLineItems
+    (1 row)
+
+    Combined with the qname table it provides names for each field. 
+
+
+top level object 
+    
+
+    xbrl=# select local_name from element
+    join qname using(qname_id) 
+    where element_id = 13463;
+         local_name     
+         
+    --------------------
+     StatementLineItems
+    (1 row)
+
+
+2nd level: 
+    xbrl=# select element_id, local_name from element
+    join qname using(qname_id) 
+    where element_id in (14853,4642,15289,12097);
+     element_id |                               local_name                               
+    ------------+------------------------------------------------------------------------
+           4642 | NetCashProvidedByUsedInInvestingActivitiesContinuingOperationsAbstract
+          12097 | SupplementalCashFlowInformationAbstract
+          14853 | NetCashProvidedByUsedInOperatingActivitiesContinuingOperationsAbstract
+          15289 | NetCashProvidedByUsedInFinancingActivitiesContinuingOperationsAbstract
+    (4 rows)
+
+3rd level
+
+    xbrl=# select element_id, local_name, is_numeric, is_monetary from element
+    join qname using(qname_id) 
+    where element_id in (17104,1476,13443);
+     element_id |                                      local_name                                      | is_numeric | is_monetary 
+    ------------+--------------------------------------------------------------------------------------+------------+-------------
+           1476 | AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract | f          | f
+          13443 | NetCashProvidedByUsedInOperatingActivitiesContinuingOperations                       | t          | t
+          17104 | NetIncomeLoss                                                                        | t          | t
+    (3 rows)
+
+4th level
+    xbrl=# select element_id, local_name from element
+    join qname using(qname_id) 
+    where element_id in (20617,10772,15200);
+     element_id |                local_name                
+    ------------+------------------------------------------
+          10772 | AmortizationOfFinancingCostsAndDiscounts
+          15200 | DeferredIncomeTaxExpenseBenefit
+          20617 | DepreciationAndAmortization
+    (3 rows)
+
+
+The fact table provides more information on monetary & numeric values. 
+Examples: 
+
+
+    xbrl=# select fact_id, accession_id, context_id, unit_id, element_id, effective_value, xml_id, decimals_value
+    from fact
+    where element_id = 17104;
+     fact_id | accession_id | context_id | unit_id | element_id | effective_value |                           xml_id                            | decimals_value 
+    ---------+--------------+------------+---------+------------+-----------------+-------------------------------------------------------------+----------------
+         630 |            1 |        109 |       2 |      17104 |       150204000 | id_6129552_3CE6C43E-62EC-4F24-AA73-CAFDFDF99642_3_21        |             -3
+         733 |            1 |         68 |       2 |      17104 |       150204000 | id_6129552_5EBD189A-F442-45E6-83B1-F05F09C9CA67_4004_700002 |             -3
+         805 |            1 |        217 |       2 |      17104 |       178292000 | id_6129552_3CE6C43E-62EC-4F24-AA73-CAFDFDF99642_2_21        |             -3
+         911 |            1 |        238 |       2 |      17104 |       178292000 | id_6129552_5EBD189A-F442-45E6-83B1-F05F09C9CA67_6004_700010 |             -3
+        1088 |            1 |         56 |       2 |      17104 |       180201000 | id_6129552_3CE6C43E-62EC-4F24-AA73-CAFDFDF99642_1_21        |             -3
+        1272 |            1 |        182 |       2 |      17104 |       180201000 | id_6129552_5EBD189A-F442-45E6-83B1-F05F09C9CA67_9004_700019 |             -3
+        1295 |            1 |        228 |       2 |      17104 |       -14296000 | id_6129552_7BC29425-D93B-4E1D-90AF-622A749976A9_1001_6      |             -3
+        1360 |            1 |        166 |       2 |      17104 |        45068000 | id_6129552_90A6DB8F-0184-4823-9CB1-E223F254DB09_1_8         |             -3
+        1373 |            1 |        286 |       2 |      17104 |        47700000 | id_6129552_2CD83B90-F29F-48AE-8ECE-4304D6147841_1_8         |             -3
+        1386 |            1 |        118 |       2 |      17104 |        52025000 | id_6129552_90A6DB8F-0184-4823-9CB1-E223F254DB09_2_8         |             -3
+        1399 |            1 |        233 |       2 |      17104 |        47933000 | id_6129552_2CD83B90-F29F-48AE-8ECE-4304D6147841_2_8         |             -3
+        1414 |            1 |         40 |       2 |      17104 |        40391000 | id_6129552_90A6DB8F-0184-4823-9CB1-E223F254DB09_4_8         |             -3
+        1427 |            1 |        168 |       2 |      17104 |        40808000 | id_6129552_90A6DB8F-0184-4823-9CB1-E223F254DB09_3_8         |             -3
+        1440 |            1 |        100 |       2 |      17104 |        37745000 | id_6129552_2CD83B90-F29F-48AE-8ECE-4304D6147841_4_8         |             -3
+        1453 |            1 |         76 |       2 |      17104 |        46823000 | id_6129552_2CD83B90-F29F-48AE-8ECE-4304D6147841_3_8         |             -3
+    (15 rows)
+
+
+    xbrl=# select fact_id, accession_id, context_id, unit_id, element_id, effective_value, xml_id, decimals_value
+    from fact
+    where element_id = 20617;
+     fact_id | accession_id | context_id | unit_id | element_id | effective_value |                       xml_id                        | decimals_value 
+    ---------+--------------+------------+---------+------------+-----------------+-----------------------------------------------------+----------------
+         667 |            1 |        109 |       2 |      20617 |        62341000 | id_6129552_66EFEB9D-FD9B-46B3-832E-3D719722A8D9_3_3 |             -3
+         843 |            1 |        217 |       2 |      20617 |        74405000 | id_6129552_66EFEB9D-FD9B-46B3-832E-3D719722A8D9_2_3 |             -3
+        1131 |            1 |         56 |       2 |      20617 |        76263000 | id_6129552_66EFEB9D-FD9B-46B3-832E-3D719722A8D9_1_3 |             -3
+    (3 rows)
+
+
+
+
+
+netid	accid	elqid	description	link_type
+475	1	8018	1003 - Statement - Consolidated Balance Sheets	calculationLink
+330	1	8018	1005 - Statement - Consolidated Statements of Operations	calculationLink
+536	1	8018	1006 - Statement - Consolidated Statements of Comprehensive Income	calculationLink
+197	1	8018	1008 - Statement - Consolidated Statements of Cash Flows	calculationLink
+
+
+
+notes on database structure. 
+tables:
+    
+    accession table: 
+        this table holds basic information about the document. 
+        important fields: 
+            accession_id -> serial primary key
+            accepted_timestamp -> time when the filing was accepted by EDGAR. 
+            filing_date
+    accession_document_association: 
+        this table holds the relation between accesion_id's and document_id's. 
+        
+    
+    unit: 
+        1 shares
+        2 USD
+        6 USD_per_share
+        
+        
+            creation_software -> the software used to create the XBRL
+    
+    
+    context: 
+        this table has details about the context of each field in the file. 
+        
+            accession_id
+            period_start
+            period_end
+            period_instant
+            
+            content_xml_id? 
+            entity_identifier? 
+                <- shouldn't this be a characteristic of the entity and the accession? 
+    context_dimension:
+        ... im not sure what this does... :(
+        it holds 27 fiels for each context_id... which are pretty much the same
+        across the board, except for member_qname_id
+    
+    fact table: 
+        this table seems to hold the data. 
+        
+            accession_id
+            context_id
+            unit_id
+            element_id
+            effective_value & fact_value, not sure what the difference is between these 2. 
+            decimals_value <- this may be useful to parse from non XBRL documents. 
+            xml_id <- this may be useful for comparing between different accession docs. 
+     
+        
+     relationship. 
+        describes the network of attributes that make the financial statements. 
+        from the atomic components to the summarized lines in the financial statement. 
+        maps the relation between elements. 
+        
+     document
+        this table has a list of all documents that were used to build the database. 
+        the element table traces each element back to the document where it originates. 
+          
+     custom_role_type:
+        this table seems to hold information about footnotes used for disclosure? 
+            
+    element table: 
+      

@@ -1,0 +1,82 @@
+# -*- coding: utf-8 -*-
+"""
+EDGAR_CRAWLER
+
+
+This program is designed to extract information from the SEC's EDGAR documents
+The objective is to build a software that allows a user to enter a stock
+symbol and get fundamental information from the filings made by that company.
+
+
+### EDGAR
+  EDGAR is a web portal where the SEC makes corporate fillings available
+
+  http://www.sec.gov/edgar/quickedgar.htm
+
+### Notes
+
+
+Searches can be narrowed down by dates.
+
+Types of search supported:
+
+
+  - FULL text search:
+      - goes  over the last 4 years of fillings and attachments.
+  - Current Events Analysis:
+      - goes over fillings made during the previous week.
+      - this allows you for example to search for all 10K (anual)
+        or 10Q (quaterly) fillings made in the last week.
+
+
+### FTP access
+
+  EDGAR supports FTP access
+
+  http://www.sec.gov/edgar/searchedgar/ftpusers.htm
+
+  - To use anonymous FTP to access the EDGAR FTP server, use your
+    FTP software to connect to ftp://ftp.sec.gov and
+    log in as user "anonymous,"
+    using your electronic mail address as the password.
+
+  #### Available Index types:
+
+  Four types of indexes are available:
+
+  - company — sorted by company name
+
+  - form — sorted by form type
+
+  - master — sorted by CIK number
+
+  - XBRL —  list of submissions containing XBRL financial files,
+            sorted by CIK number;
+            these include Voluntary Filer Program submissions
+
+  Indexes are located in the following folders
+    according to time period indexed:
+
+    - /edgar/daily-index — daily index files through the current year;
+      previous year folders are available through 1994Q3
+
+    - /edgar/full-index — year folders contain quarterly indexes.
+      Full indexes offer a "bridge" between Quarterly and Daily indexes,
+      compiling filings for the previous business day through the beginning of
+      the current quarter.
+
+
+  - Feed and Oldloads Folders
+
+  Feed — The Feed directory contains a tar and gzip archive file
+        e.g., 20061207.nc.tar.gz;
+        nc stands for non-cooked) for each filing day.
+        Each filing compressed in the tar is a separate filing submission.
+
+
+
+  Created on Wed Jan  8 10:42:51 2014
+
+@author: ptorre
+"""
+
